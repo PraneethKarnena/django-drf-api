@@ -1,0 +1,1 @@
+web: gunicorn navia_project.wsgi
