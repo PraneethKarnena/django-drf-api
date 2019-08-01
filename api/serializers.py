@@ -13,3 +13,10 @@ class DoctorsSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.DoctorModel
         fields = '__all__'
+
+
+class FriendsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.FriendModel
+        fields = '__all__'
