@@ -36,3 +36,10 @@ def initial_patient_details(request):
     patients = models.PatientModel.objects.all()
     patients_serializer = serializers.InitialPatientSerializer(patients, many=True)
     return Response(data={'data': patients_serializer.data}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def doctors_details(request):
+    doctors = models.DoctorModel.objects.all()
+    doctors_serializer = serializers.DoctorsSerializer(doctors, many=True)
+    return Response(data={'data': doctors_serializer.data}, status=status.HTTP_200_OK)
