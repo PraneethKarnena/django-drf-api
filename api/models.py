@@ -23,7 +23,7 @@ class PatientModel(models.Model):
         return f'{self.name} - {self.email}'
 
 
-class FriendsModel(models.Model):
+class FriendModel(models.Model):
     doctor = models.ForeignKey(DoctorModel, on_delete=models.CASCADE)
     patient = models.ForeignKey(PatientModel, on_delete=models.CASCADE)
     STATUS_CHOICES = (
