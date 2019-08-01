@@ -3,6 +3,8 @@
 Sample data has already been inserted.
 Base API URL: [https://testing-19.herokuapp.com/api/](https://testing-19.herokuapp.com/api/)
 
+*All the requests should be made through HTTP GET method.*
+
  - Get all patients info - `/get-patients/` - returns just the name, ID of the patient
  - Get all doctors info - `/get-doctors/` - returns name, ID of the doctors
  - Send a friend request to a patient - `/send-request/{patient-id}/{doctor-id}/`
