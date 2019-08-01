@@ -43,3 +43,11 @@ def doctors_details(request):
     doctors = models.DoctorModel.objects.all()
     doctors_serializer = serializers.DoctorsSerializer(doctors, many=True)
     return Response(data={'data': doctors_serializer.data}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def send_request(request, patient_id, doctor_id):
+    try:
+        friendship = models.FriendModel.objects.get(patient_id=patient_id, doctor_id=doctor_id)
+    except:
+        friendship = models.FriendModel.objects.create(patient_id=patient_id, doctor_id=doctor_id)
