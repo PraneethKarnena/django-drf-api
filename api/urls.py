@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path('isd/', views.insert_sample_data),
     path('get-patients/', views.initial_patient_details),
+    path('get-doctors/', views.doctors_details),
 ]
 
