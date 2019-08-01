@@ -51,3 +51,6 @@ def send_request(request, patient_id, doctor_id):
         friendship = models.FriendModel.objects.get(patient_id=patient_id, doctor_id=doctor_id)
     except:
         friendship = models.FriendModel.objects.create(patient_id=patient_id, doctor_id=doctor_id)
+
+    friends_serializer = serializers.FriendsSerializer(friendship, many=False)
+    return Response(data={'data': friends_serializer.data}, status=status.HTTP_200_OK)
