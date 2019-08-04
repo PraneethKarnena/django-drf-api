@@ -4,7 +4,6 @@
 .python-version
 **/ENV/**
 **/media/**
-**/migrations/**
 
 
 # Created by https://www.gitignore.io/api/python,django,virtualenv,visualstudiocode
