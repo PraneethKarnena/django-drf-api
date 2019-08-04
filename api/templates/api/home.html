@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Demonstration - Django ReST Framework</title>
+</head>
+
+<body>
+    <h2 id="apidemonstrationdjangorestframework">API demonstration - Django ReST Framework</h2>
+
+    <p>Sample data has already been inserted.
+        Base API URL: <a href="https://testing-19.herokuapp.com/api/">https://testing-19.herokuapp.com/api/</a></p>
+
+    <p><em>All the requests should be made through HTTP GET method.</em></p>
+
+    <ul>
+        <li>
+            <p>Get all patients info - <code>/get-patients/</code> - returns just the name, ID of the patient</p>
+        </li>
+
+        <li>
+            <p>Get all doctors info - <code>/get-doctors/</code> - returns name, ID of the doctors</p>
+        </li>
+
+        <li>
+            <p>Send a friend request to a patient - <code>/send-request/{patient-id}/{doctor-id}/</code></p>
+        </li>
+
+        <li>
+            <p>Accept a request - <code>/request/{patient-id}/{doctor-id}/{ACTION}</code> - <code>ACCEPT</code> or
+                <code>REJECT</code></p>
+        </li>
+
+        <li>
+            <p>View a patient data - <code>/view-patient/{patient-id}/{doctor-id}/</code></p>
+        </li>
+
+        <li>
+            <p>View friends - <code>/get-friends/{patient_id}/{doctor-id}/</code></p>
+
+            <p><em>Note: No authentication has been implemented for time being</em></p>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -24,8 +24,8 @@ class PatientModel(models.Model):
 
 
 class FriendModel(models.Model):
-    doctor = models.ForeignKey(DoctorModel, on_delete=models.CASCADE)
-    patient = models.ForeignKey(PatientModel, on_delete=models.CASCADE)
+    doctor = models.ManyToManyField(DoctorModel)
+    patient = models.ManyToManyField(PatientModel)
     STATUS_CHOICES = (
         ('PEN', 'Pending'),
         ('ACC', 'Accepted'),
