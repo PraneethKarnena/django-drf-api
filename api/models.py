@@ -17,7 +17,7 @@ class PatientModel(models.Model):
     job = models.TextField()
     mobile = models.CharField(max_length=12)
     dob = models.DateField()
-    blood_group = models.CharField(max_length=3)
+    blood_group = models.CharField(max_length=6)
 
     def __str__(self):
         return f'{self.name} - {self.email}'
